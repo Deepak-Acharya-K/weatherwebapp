@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+:root{
+    --bgcolor:rgba(135, 207, 235, 0.294);
+    --tcolor:white;
+    --nbgcolor:#232222;
+}
+.app-container{
+    width: 80vw;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+.head-container{
+    width: 100%;
+    height: 130px;
+    background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+.head-container h1{
+    font-size: 2em;
+}
+.search-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+#search{
+    width: 85%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+#btnsearch{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 16px;
+    border: none;
+    margin-left: 5px;
+}
+#btnnight{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 16px;
+    border: none;
+    margin-left: 5px;
+}
+.body-container{
+    width: 100%;
+    height: calc(100% - 130px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.item1{
+    width: 100%;
+    height:300px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-container{
+    width: 250px;
+    height:250px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#celcius{
+    font-size: 5vw;
+}
+#type{
+    font-size: 4vw;
+}
+#location{
+    font-size: 2.5vw;
+}
+.temp-container{
+    width: 50%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.i1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.item2{
+    width: 100%;
+    height:100px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.humidity-container{
+    width:45%;
+    height: 100%;
+    background-color:var(--bgcolor);
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+#humidityval{
+    font-weight: 700;
+    font-size: 25px;
+}
+.wind-container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    background-color: var(--bgcolor);
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    margin-left: 5px;
+}
+#windval{
+    font-weight: 700;
+    font-size: 25px;
+}
+#dev{
+    font-weight: 900;
+}
+.dark-mode {
+    background-color: var(--nbgcolor);
+    color: var(--tcolor);
+}
+.head-mode {
+    background-color:var(--bgcolor);
+}
+/* ----------Responsive------------- */
+@media only screen and (max-width:650px) {
+    .img-container{
+        width: 215px;
+        height: 215px;
+    }
+}
+@media only screen and (max-width:550px) {
+    .item1{
+        height:300px;
+        flex-direction: column;
+    }
+    .temp-container{
+        width: 100%;  
+    }
+    .img-container{
+        width: 100%;
+        height: 470px;
+    }
+    .humidity-container{
+        flex-wrap: wrap;
+    }
+    .wind-container{
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-width:380px) {
+    .img-container{
+        height: 470px;
+    }
+}
+@media only screen and (max-width:350px) {
+    .item2 {
+        width: 100%;
+        height: 120px;
+    }
+}
+@media only screen and (max-width:332px) {
+    .head-container h1{
+        font-size: 1.5em;
+    }
+}
+@media only screen and (max-width:260px) {
+    .head-container h1{
+        font-size: 1em;
+    }
+}
